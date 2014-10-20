@@ -25,11 +25,6 @@ app.use morgan 'dev'
 app.use cookieParser()
 app.use bodyParser.json()
 
-# view engine setup
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'jade')
-app.use(express.static(__dirname + '/public'))
-
 # required for passport
 # app.use session { secret: 'mysecret' }
 # app.use passport.initialize()
