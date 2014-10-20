@@ -38,7 +38,7 @@ app.use(express.static(__dirname + '/public'))
 
 # ROUTES
 
-require('./routes/index')(app, passport)
+require('./app/routes/index')(app, passport)
 
 # START THE SERVER
 app.listen(port)
