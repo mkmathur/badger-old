@@ -16,8 +16,8 @@ session = require 'express-session'
 
 # CONFIGURE
 
-# require './config/db'
-# require('./config/passport')(passport)
+require './config/db'
+require('./config/passport')(passport)
 # middleware = require('./config/middleware')
 
 # set up express application
@@ -26,10 +26,10 @@ app.use cookieParser()
 app.use bodyParser.json()
 
 # required for passport
-# app.use session { secret: 'mysecret' }
-# app.use passport.initialize()
-# app.use passport.session()
-# app.use flash()
+app.use session { secret: 'mysecret' }
+app.use passport.initialize()
+app.use passport.session()
+app.use flash()
 
 # ROUTES
 
