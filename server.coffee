@@ -24,6 +24,7 @@ require('./config/passport')(passport)
 app.use morgan 'dev'
 app.use cookieParser()
 app.use bodyParser.json()
+app.use bodyParser.urlencoded()
 
 # required for passport
 app.use session { secret: 'mysecret' }
